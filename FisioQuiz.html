@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FisioQuiz</title>
+    <link rel="shortcut icon" href="./images/Physioicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/cssQuiz.css">
+    <link rel="stylesheet" href="./css/Game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <meta name="theme-color" content="#2091F9">
+    <meta name="title" content="Fisioterapia">
+    <meta name="description"
+        content="La FISIOTERAPIA es aquella PASIÓN de crear MOVIMIENTO con la MENTE con el CUERPO y fundamentalmente con el CORAZÓN.">
+    <meta name="robots" content="index">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">FISIOQUIZ</h2>
+            </div>
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="./index.html" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="./FisioQuiz.html" class="nav__links">FisioQuiz</a>
+                </li>
+                <img src="./images/close.svg" class="nav__close" alt="Cerrar">
+            </ul>
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img" alt="Menú">
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section class="container about">
+
+            <input class="input name" type="text" placeholder="Nombre y Apellido">
+            <div class="start_btn">
+                <button>Iniciar Quiz</button>
+            </div>
+            <div class="info_box">
+                <div class="info-title"><span>Reglamento</span></div>
+                <div class="info-list">
+                    <div class="info">1. Tendrás <span>15 segundos</span> por cada pregunta.</div>
+                    <div class="info">2. Una vez que seleccione su respuesta, no se puede deshacer.</div>
+                    <div class="info">3. No puede seleccionar ninguna opción una vez que se acaba el tiempo.</div>
+                    <div class="info">4. No puedes salir del Quiz mientras estás jugando.</div>
+                    <div class="info">5. Obtendrá puntos en función de sus respuestas correctas.</div>
+                </div>
+                <div class="buttons">
+                    <button class="quit">Salir</button>
+                    <button class="restart">Continuar</button>
+                </div>
+            </div>
+
+            <!-- Quiz Box -->
+            <div class="quiz_box">
+                <header>
+                    <div class="title">FisioQuiz</div>
+                    <div class="timer">
+                        <div class="time_left_txt"></div>
+                        <div class="timer_sec">15</div>
+                    </div>
+                    <div class="time_line"></div>
+                </header>
+                <section>
+                    <div class="que_text">
+                    </div>
+                    <div class="option_list">
+                    </div>
+                </section>
+
+                <!-- footer of Quiz Box -->
+                <footer>
+                    <div class="total_que">
+                        <!-- Here I've inserted Question Count Number from JavaScript -->
+                    </div>
+                    <button class="next_btn">Continuar</button>
+                </footer>
+            </div>
+
+            <!-- Result Box -->
+            <div class="result_box">
+                <div class="icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="complete_text">Quiz Completado!</div>
+                <div class="score_text">
+                    <!-- Here I've inserted Score Result from JavaScript -->
+                </div>
+                <div class="buttons">
+                    <form action="https://formspree.io/f/myyondpe" method="POST">
+                        <label>
+                            <input type="hidden" name="Calificación" id="Calificación" value="">
+                            <input type="hidden" name="Nombre" id="Nombre" value="">
+                        </label>
+                        <button type="submit" class="quit">Salir y Enviar</button>
+                    </form>
+                    <button class="restart">Repetir</button>
+
+                </div>
+            </div>
+
+            <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+            <script src="jsGame/questions.js"></script>
+
+            <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+            <script src="jsGame/script.js"></script>
+        </section>
+
+        <script src="./js/menu.js"></script>
+
+
+    </main>
+
+    </form>
+</body>
+
+</html>
